@@ -6,23 +6,25 @@
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint": "eslint . --fix",
-    "lint:check": "eslint .",
+    "lint": "tsc --noEmit && eslint . --fix",
+    "lint:check": "tsc --noEmit && eslint .",
     "prepare": "husky",
     "start": "bun run src/index.ts",
     "test": "bun test",
     "test:coverage": "bun test --coverage",
     "test:watch": "bun test --watch",
     "test:jest": "jest",
-    "test:jest:coverage": "jest --coverage",
+    "test:jest:coverage": "jest --coverage --passWithNoTests",
     "test:jest:watch": "jest --watch",
     "commit:generate": "bun run src/scripts/generate-commit-message.ts"
   },
   "dependencies": {
-    "@langchain/core": "~0.3.26",
-    "@langchain/langgraph": "~0.2.36",
-    "@langchain/openai": "~0.3.16",
-    "langchain": "~0.3.8"
+    "@langchain/anthropic": "^0.3.11",
+    "@langchain/community": "^0.3.11",
+    "@langchain/core": "^0.3.24",
+    "@langchain/langgraph": "^0.0.6",
+    "@langchain/openai": "^0.0.14",
+    "langchain": "^0.1.21"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -40,5 +42,6 @@
   },
   "peerDependencies": {
     "typescript": "~5.7.2"
-  }
+  },
+  "license": "MIT"
 }

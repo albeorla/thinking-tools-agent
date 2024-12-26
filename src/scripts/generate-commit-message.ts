@@ -1,7 +1,6 @@
 import { ChatOpenAI } from "@langchain/openai";
 import { PromptTemplate } from "@langchain/core/prompts";
 import { execSync } from "child_process";
-import { AIMessage } from "@langchain/core/messages";
 
 // Load environment variables
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
@@ -67,29 +66,15 @@ async function generateCommitMessage(diff: string): Promise<string> {
   });
 
   const prompt = PromptTemplate.fromTemplate(COMMIT_MESSAGE_TEMPLATE);
+  const response = await model.invoke(
+    await prompt.format({
+      types: COMMIT_TYPES.join(", "),
+      diff: diff,
+    }),
+  );
 
-  const chain = prompt.pipe(model);
-
-  const response = (await chain.invoke({
-    types: COMMIT_TYPES.join(", "),
-    diff: diff,
-  })) as string | AIMessage | string[];
-
-  if (typeof response === "string") {
-    return response.trim();
-  }
-
-  // Handle AIMessage content
-  if (response instanceof AIMessage) {
-    return response.content.toString().trim();
-  }
-
-  // Handle array of content
-  if (Array.isArray(response)) {
-    return response
-      .map((item) => item.toString())
-      .join(" ")
-      .trim();
+  if (typeof response.content === "string") {
+    return response.content.trim();
   }
 
   throw new Error("Unexpected response format from OpenAI");

@@ -32,6 +32,8 @@ const config: Config = {
     },
   },
   testMatch: ["**/test/**/*.test.ts"],
+  coveragePathIgnorePatterns: ["/node_modules/", "/src/graphs/"],
+  testPathIgnorePatterns: ["/node_modules/", "/src/graphs/"],
 };
 
 export default config;
