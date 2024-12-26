@@ -1,0 +1,10 @@
+{
+  "*.{json,md,yml}": [
+    "bun format"
+  ],
+  "*.{ts,tsx}": [
+    "bun format",
+    "bun lint",
+    "bun test"
+  ]
+}
