@@ -70,4 +70,20 @@ graph.addConditionalEdges("agent", shouldContinue, {
 });
 graph.addEdge("tools", "agent");
 
+// Export graph configuration for LangGraph Studio
+export const graphConfig = {
+  nodes: [
+    { id: "__start__", type: "start" },
+    { id: "agent", type: "tool", data: { name: "Agent" } },
+    { id: "tools", type: "tool", data: { name: "Tool Executor" } },
+    { id: "__end__", type: "end" },
+  ],
+  edges: [
+    { from: "__start__", to: "agent" },
+    { from: "agent", to: "tools", condition: "tools" },
+    { from: "agent", to: "__end__", condition: "end" },
+    { from: "tools", to: "agent" },
+  ],
+};
+
 export const app = graph.compile();

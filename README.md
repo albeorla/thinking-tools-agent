@@ -16,6 +16,7 @@ A LangGraph-based system that helps select the most appropriate thinking tool fo
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Usage](#usage)
+    - [LangGraph Studio Visualization](#langgraph-studio-visualization)
   - [Development](#development)
     - [Code Organization](#code-organization)
     - [Commit Messages](#commit-messages)
@@ -119,6 +120,20 @@ const result = await driver.process({
 
 console.log("Recommended Tool:", result.selectedTool);
 ```
+
+### LangGraph Studio Visualization
+
+You can visualize the agent's workflow in LangGraph Studio:
+
+1. Visit [LangGraph Studio](https://studio.langchain.dev)
+2. Import the graph configuration from `src/graphs/chat.ts`:
+   ```typescript
+   import { graphConfig } from "./graphs/chat";
+   ```
+3. The visualization will show:
+   - The agent's decision-making flow
+   - Tool execution paths
+   - Conditional routing based on responses
 
 ## Development
 
