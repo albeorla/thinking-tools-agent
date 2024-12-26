@@ -5,6 +5,7 @@
   "*.{ts,tsx}": [
     "bun format",
     "bun lint",
-    "bun test"
+    "bun run test:jest:coverage",
+    "bun run commit:generate | git commit --file -"
   ]
 }

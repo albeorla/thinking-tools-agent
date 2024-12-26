@@ -1,0 +1,4 @@
+# Skip if commit message is already provided (e.g., via -m flag)
+if [ -z "${2-}" ]; then
+  bun run commit:generate > $1
+fi 

@@ -1,5 +1,8 @@
 # Thinking Tools Guide
 
+[![CI Status](https://github.com/albeorla/thinking-tools-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/albeorla/thinking-tools-agent/actions)
+[![Coverage](https://img.shields.io/badge/coverage-96%25-brightgreen.svg)](coverage/lcov-report/index.html)
+
 A LangGraph-based system that helps select the most appropriate thinking tool for your problem or decision-making needs. The system analyzes your query and recommends the best thinking tool based on the characteristics of your situation.
 
 ## Table of Contents
@@ -15,6 +18,7 @@ A LangGraph-based system that helps select the most appropriate thinking tool fo
     - [Usage](#usage)
   - [Development](#development)
     - [Code Organization](#code-organization)
+    - [Commit Messages](#commit-messages)
     - [Adding New Tools](#adding-new-tools)
   - [Testing](#testing)
   - [Architecture](#architecture)
@@ -70,8 +74,8 @@ A LangGraph-based system that helps select the most appropriate thinking tool fo
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/thinking-tools.git
-   cd thinking-tools
+   git clone https://github.com/albeorla/thinking-tools-agent.git
+   cd thinking-tools-agent
    ```
 
 2. Install dependencies:
@@ -127,6 +131,17 @@ console.log("Recommended Tool:", result.selectedTool);
   - `tools/`: Thinking tool definitions and characteristics
 - `utils/`: Shared utilities and helper functions
 
+### Commit Messages
+
+This project uses conventional commits with AI-powered commit message generation. When you make a commit:
+
+1. Stage your changes with `git add`
+2. Run `git commit`
+   - All checks (format, lint, tests) will run
+   - If they pass, an AI will analyze your changes and generate a conventional commit message
+   - The commit will be created with the generated message
+3. Or use `git commit -m "your message"` to provide your own message
+
 ### Adding New Tools
 
 1. Define the tool in `src/data/tools/tool-definitions.ts`
@@ -138,7 +153,11 @@ console.log("Recommended Tool:", result.selectedTool);
 Run the test suite:
 
 ```bash
+# Run Bun tests
 bun test
+
+# Run Jest tests with coverage
+bun run test:jest:coverage
 ```
 
 The project includes:
@@ -147,6 +166,17 @@ The project includes:
 - Integration tests for the complete workflow
 - Performance and stress tests
 - Edge case handling tests
+- Coverage reporting (via Jest)
+  - HTML reports in `coverage/lcov-report/`
+  - Cobertura XML in `coverage/cobertura-coverage.xml`
+  - LCOV data in `coverage/lcov.info`
+
+Current coverage thresholds:
+
+- Statements: >90%
+- Branches: >90%
+- Functions: 100%
+- Lines: >90%
 
 ## Architecture
 

@@ -31,6 +31,16 @@ jobs:
       - name: Run linter
         run: bun run lint:check
 
-      # Step 5: Run tests
-      - name: Run tests
-        run: bun test
+      # Step 5: Run tests with Jest and generate coverage
+      - name: Run Jest tests with coverage
+        run: bun run test:jest:coverage
+
+      # Step 6: Upload coverage reports
+      - name: Upload coverage reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-reports
+          path: |
+            coverage/cobertura-coverage.xml
+            coverage/lcov.info
+            coverage/lcov-report/

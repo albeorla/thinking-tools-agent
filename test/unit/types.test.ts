@@ -1,4 +1,4 @@
-import { expect, test, describe } from "bun:test";
+import { expect, test, describe } from "@jest/globals";
 import { ToolType } from "../../src/core/types";
 
 describe("ToolType Enum", () => {

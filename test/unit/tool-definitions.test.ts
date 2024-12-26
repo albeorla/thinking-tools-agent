@@ -1,4 +1,4 @@
-import { expect, test, describe } from "bun:test";
+import { expect, test, describe } from "@jest/globals";
 import { thinkingTools } from "../../src/data/tools/tool-definitions";
 import { ToolType } from "../../src/core/types";
 

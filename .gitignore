@@ -32,3 +32,5 @@ coverage/
 
 # Bun
 bun.lockb
+
+*.code-workspace
