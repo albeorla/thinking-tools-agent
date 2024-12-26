@@ -5,9 +5,56 @@
 
 A LangGraph-based system that helps select the most appropriate thinking tool for your problem or decision-making needs. The system analyzes your query and recommends the best thinking tool based on the characteristics of your situation.
 
+## Example Conversation
+
+Here's an example showing how the thinking tools can help analyze a business opportunity:
+
+**User**: Help me plan how to earn money on Etsy with digital products, we need to create a framework I can build on
+
+**Assistant**: _Uses First Principles thinking to break down the problem:_
+
+1. Fundamental truths:
+
+- Etsy is an online marketplace for handmade/vintage items and craft supplies
+- Digital products are files/data that can be downloaded after purchase
+- To earn money, you need to create value for buyers
+
+2. Framework:
+
+- Research: Analyze trends, identify niches, study competitors
+- Product Creation: Create professional digital products
+- Marketing: Build brand, implement SEO, gather reviews
+- Customer Service: Provide support and gather feedback
+
+**User**: I think I can use erank to find estimated revenue for winning products and essentially outcompete them with Midjourney
+
+**Assistant**: _Uses Second-Order Thinking to analyze implications:_
+
+Advantages:
+
+- Erank provides insights into profitable niches
+- Midjourney enables efficient creation of unique designs
+- Potential for competitive pricing while maintaining margins
+
+Risks/Considerations:
+
+- Market saturation challenges
+- Ethical considerations around AI-generated art
+- Quality control requirements
+- Competition may adopt similar tools
+- Customer support complexity
+
+Second-Order Effects:
+
+- Potential market disruption
+- Impact on pricing and margins
+- Evolving customer expectations
+- Need for continuous adaptation
+
 ## Table of Contents
 
 - [Thinking Tools Guide](#thinking-tools-guide)
+  - [Example Conversation](#example-conversation)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Available Tools](#available-tools)
@@ -27,7 +74,9 @@ A LangGraph-based system that helps select the most appropriate thinking tool fo
   - [Testing](#testing)
   - [Architecture](#architecture)
     - [Core Components](#core-components)
+    - [System Flow](#system-flow)
   - [Built With](#built-with)
+  - [Related Work](#related-work)
   - [License](#license)
 
 ## Features
@@ -228,12 +277,59 @@ Current coverage thresholds:
    - Clear interfaces for messages and state
    - Enum-based tool categorization
 
+### System Flow
+
+The system uses a LangGraph-based architecture to manage the flow of conversation and tool selection:
+
+![LangGraph Studio Flow](docs/basic-example.png)
+
+The graph shows the core components:
+
+- `_start_`: Entry point for new queries
+- `callModel`: Main LLM interaction node
+- `tools`: Tool selection and execution
+- `_end_`: Conversation completion
+
+This flow enables dynamic tool selection and recursive thinking patterns when needed.
+
 ## Built With
 
 - [LangChain](https://js.langchain.com/) - LLM framework
 - [LangGraph](https://github.com/langchain-ai/langgraph-js) - Graph orchestration
 - [OpenAI](https://openai.com/) - Language model
 - [Bun](https://bun.sh) - JavaScript runtime
+
+## Related Work
+
+- [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629) - Original ReAct paper introducing the framework for reasoning and acting in language models. ReAct combines:
+  - **Re**asoning: Breaking down complex problems into steps
+  - **Act**ing: Taking concrete actions based on that reasoning
+
+Our system implements ReAct principles through:
+
+1. **Reasoning Phase**: The `callModel` node analyzes the user's query and reasons about which thinking tool is most appropriate
+2. **Action Phase**: The `tools` node executes the selected thinking tool
+3. **Observation**: Results are observed and fed back into the reasoning process if needed
+4. **Iteration**: The system can loop through this process multiple times for complex problems
+
+The LangGraph flow visualized above shows this ReAct pattern in action:
+
+```mermaid
+graph TD
+    A[_start_] --> B[callModel]
+    B --> C[tools]
+    C --> B
+    B --> D[_end_]
+```
+
+This implementation allows for:
+
+- Dynamic tool selection based on context
+- Recursive thinking patterns when needed
+- Continuous refinement of solutions
+- Integration of multiple thinking frameworks
+
+The ReAct framework provides the theoretical foundation for how our system combines analytical thinking tools with practical action steps.
 
 ## License
 
