@@ -29,7 +29,7 @@ jobs:
 
       # Step 4: Run linter
       - name: Run linter
-        run: bun run lint
+        run: bun run lint:check
 
       # Step 5: Run tests
       - name: Run tests
