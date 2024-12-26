@@ -16,7 +16,10 @@ A LangGraph-based system that helps select the most appropriate thinking tool fo
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Usage](#usage)
-    - [LangGraph Studio Visualization](#langgraph-studio-visualization)
+    - [Environment Variables](#environment-variables)
+      - [Core LLM API Keys](#core-llm-api-keys)
+      - [Environment Settings](#environment-settings)
+      - [LangSmith Configuration](#langsmith-configuration)
   - [Development](#development)
     - [Code Organization](#code-organization)
     - [Commit Messages](#commit-messages)
@@ -69,6 +72,8 @@ A LangGraph-based system that helps select the most appropriate thinking tool fo
 
 - Node.js 16+ or Bun runtime
 - OpenAI API key
+- Anthropic API key (for Claude 3 Sonnet model)
+- Tavily API key
 
 ### Installation
 
@@ -87,9 +92,11 @@ A LangGraph-based system that helps select the most appropriate thinking tool fo
 
 3. Set up environment variables:
    - Copy `.env.example` to `.env`
-   - Add your OpenAI API key:
+   - Add your API keys and configuration:
      ```
-     OPENAI_API_KEY=your_api_key_here
+     OPENAI_API_KEY=your_openai_key
+     ANTHROPIC_API_KEY=your_anthropic_key
+     TAVILY_API_KEY=your_tavily_key
      ```
 
 ### Usage
@@ -121,19 +128,26 @@ const result = await driver.process({
 console.log("Recommended Tool:", result.selectedTool);
 ```
 
-### LangGraph Studio Visualization
+### Environment Variables
 
-You can visualize the agent's workflow in LangGraph Studio:
+The project uses environment variables for configuration. Copy `.env.example` to `.env` and configure:
 
-1. Visit [LangGraph Studio](https://studio.langchain.dev)
-2. Import the graph configuration from `src/graphs/chat.ts`:
-   ```typescript
-   import { graphConfig } from "./graphs/chat";
-   ```
-3. The visualization will show:
-   - The agent's decision-making flow
-   - Tool execution paths
-   - Conditional routing based on responses
+#### Core LLM API Keys
+
+- `OPENAI_API_KEY`: OpenAI API key for GPT models
+- `ANTHROPIC_API_KEY`: Anthropic API key for Claude 3 Sonnet model
+- `TAVILY_API_KEY`: Tavily API key for search functionality
+
+#### Environment Settings
+
+- `NODE_ENV`: Environment (development/production)
+
+#### LangSmith Configuration
+
+- `LANGCHAIN_PROJECT`: Project identifier for LangSmith
+- `LANGSMITH_API_KEY`: API key for LangSmith integration
+
+> **Important Note**: Never commit `.env` files containing real credentials. Use `.env.example` for documentation only.
 
 ## Development
 

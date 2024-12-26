@@ -1,0 +1,11 @@
+{
+  "name": "Thinking Tools Agent",
+  "description": "A LangGraph-based system that helps select appropriate thinking tools",
+  "version": "1.0.0",
+  "node_version": "20",
+  "dependencies": ["."],
+  "graphs": {
+    "default": "./src/graphs/chat.ts:app"
+  },
+  "env": ".env"
+}
