@@ -183,6 +183,29 @@ describe("Thinking Tool Matching", () => {
     });
   });
 
+  describe("Document Structure", () => {
+    test("should match for document planning", async () => {
+      testToolMatch(
+        "Help me create a document structure with sections and subsections for my research paper",
+        "Document Structure",
+      );
+    });
+
+    test("should match for complex information organization", async () => {
+      testToolMatch(
+        "I need to organize multiple sections and subsections in my technical documentation",
+        "Document Structure",
+      );
+    });
+
+    test("should match when needing logical flow", async () => {
+      testToolMatch(
+        "I need help organizing complex information into a clear document hierarchy with multiple sections and subsections",
+        "Document Structure",
+      );
+    });
+  });
+
   describe("Tool Coverage Verification", () => {
     test("should have tested all available tools", async () => {
       const toolNames = new Set(thinkingTools.map((tool) => tool.name));
@@ -197,6 +220,7 @@ describe("Thinking Tool Matching", () => {
         "Ladder of Inference",
         "Minto Pyramid",
         "Inversion",
+        "Document Structure",
       ].forEach((tool) => {
         if (toolNames.has(tool)) {
           testedTools.add(tool);

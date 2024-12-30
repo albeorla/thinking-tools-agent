@@ -16,7 +16,8 @@
     "test:jest": "jest",
     "test:jest:coverage": "jest --coverage --passWithNoTests",
     "test:jest:watch": "jest --watch",
-    "commit:generate": "bun run src/scripts/generate-commit-message.ts"
+    "commit:generate": "bun run src/scripts/generate-commit-message.ts",
+    "tree": "tree -I 'node_modules' | cat"
   },
   "dependencies": {
     "@langchain/anthropic": "^0.3.1",

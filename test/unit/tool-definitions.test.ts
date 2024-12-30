@@ -47,7 +47,7 @@ describe("Tool Definitions", () => {
 
     expect(toolsByType[ToolType.ProblemSolving]).toBe(3); // Abstraction Laddering, First Principles, Inversion
     expect(toolsByType[ToolType.DecisionMaking]).toBe(3); // OODA Loop, Second Order Thinking, Ladder of Inference
-    expect(toolsByType[ToolType.Communication]).toBe(1); // Minto Pyramid
+    expect(toolsByType[ToolType.Communication]).toBe(2); // Minto Pyramid, Document Structure
   });
 
   test("all tools have descriptive content", () => {

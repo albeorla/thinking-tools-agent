@@ -183,4 +183,30 @@ export const thinkingTools: ThinkingTool[] = [
       "Multiple stakeholder perspectives",
     ],
   },
+  {
+    name: "Document Structure",
+    type: ToolType.Communication,
+    description:
+      "Systematically plan and structure documents using a hierarchical approach",
+    characteristics: [
+      "Document planning needed",
+      "Complex information to organize",
+      "Multiple sections required",
+      "Need for logical flow",
+    ],
+    useCase:
+      "When you need to plan, structure, or write a document with multiple sections and need a clear organizational framework",
+    process: [
+      "Define document purpose and audience",
+      "Create high-level outline with main sections",
+      "Break down sections into subsections and key points",
+      "Add supporting details and transitions",
+    ],
+    confidenceFactors: [
+      "Need for document organization",
+      "Multiple topics to cover",
+      "Complex information to present",
+      "Requires clear information hierarchy",
+    ],
+  },
 ];
