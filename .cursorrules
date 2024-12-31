@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cursor_rules>
+    <!-- Project Information -->
+    <project>
+        <name>Thinking Tools Agent</name>
+        <description>A LangGraph-based system for selecting appropriate thinking tools</description>
+        <language>TypeScript</language>
+        <runtime>Bun</runtime>
+        <framework>LangGraph</framework>
+        <package_manager>Bun</package_manager>
+    </project>
+
+    <!-- Coding Standards -->
+    <coding_standards>
+        <typescript>
+            <rule>Use TypeScript strict mode</rule>
+            <rule>Prefer type inference when obvious</rule>
+            <rule>Use interfaces for object shapes</rule>
+            <rule>Maintain strict null checks</rule>
+            <rule>Use enums for fixed sets of values</rule>
+            <rule>Leverage TypeScript utility types</rule>
+            <rule>Use generics for reusable components</rule>
+        </typescript>
+        <style>
+            <rule>Follow Prettier formatting</rule>
+            <rule>Use 2 spaces for indentation</rule>
+            <rule>Max line length of 100 characters</rule>
+            <rule>Use PascalCase for types and interfaces</rule>
+            <rule>Use camelCase for variables and functions</rule>
+            <rule>Use UPPER_CASE for constants</rule>
+            <rule>Group related code blocks with newlines</rule>
+        </style>
+        <imports>
+            <rule>Use named imports</rule>
+            <rule>Group imports by type (core, external, internal)</rule>
+            <rule>Use absolute imports with @ aliases</rule>
+            <rule>Order imports: React/framework, external, internal</rule>
+            <rule>Remove unused imports</rule>
+        </imports>
+        <langgraph>
+            <rule>Use typed nodes for graph components</rule>
+            <rule>Implement proper error handling in nodes</rule>
+            <rule>Document node inputs and outputs</rule>
+            <rule>Use meaningful names for graph states</rule>
+            <rule>Keep nodes focused and single-purpose</rule>
+        </langgraph>
+    </coding_standards>
+
+    <!-- Automatic command execution for Bun development workflow -->
+    <auto_approve_commands>
+        <command>bun run dev</command>
+        <command>bun run build</command>
+        <command>bun run test</command>
+        <command>bun run lint</command>
+        <command>bun run format</command>
+        <command>bun install</command>
+        <command>bun add</command>
+        <command>bun remove</command>
+        <command>bun run typecheck</command>
+        <command>bun run test:watch</command>
+        <command>bun run test:coverage</command>
+    </auto_approve_commands>
+
+    <!-- Commands requiring explicit approval -->
+    <require_approval>
+        <command_pattern>^git.*</command_pattern>
+        <command_pattern>^rm.*</command_pattern>
+        <command_pattern>^mv.*</command_pattern>
+        <command_pattern>^cp.*</command_pattern>
+        <command_pattern>^mkdir.*</command_pattern>
+        <command_pattern>^touch.*</command_pattern>
+        <command_pattern>^sudo.*</command_pattern>
+        <command_pattern>^chmod.*</command_pattern>
+        <command_pattern>^chown.*</command_pattern>
+    </require_approval>
+
+    <!-- Task management -->
+    <task_tracking>
+        <file>TASKS.md</file>
+        <auto_update>true</auto_update>
+        <format>markdown</format>
+        <sections>
+            <section>Todo</section>
+            <section>In Progress</section>
+            <section>Done</section>
+            <section>Blocked</section>
+        </sections>
+    </task_tracking>
+
+    <!-- Testing requirements -->
+    <testing>
+        <coverage>
+            <minimum>90</minimum>
+            <exclude>
+                <pattern>**/*.test.ts</pattern>
+                <pattern>**/__tests__/**</pattern>
+                <pattern>**/*.d.ts</pattern>
+                <pattern>**/node_modules/**</pattern>
+                <pattern>**/dist/**</pattern>
+            </exclude>
+        </coverage>
+        <requirements>
+            <rule>Write unit tests for all new features</rule>
+            <rule>Include integration tests for workflows</rule>
+            <rule>Maintain test coverage thresholds</rule>
+            <rule>Use meaningful test descriptions</rule>
+            <rule>Follow AAA pattern (Arrange-Act-Assert)</rule>
+            <rule>Mock external dependencies</rule>
+            <rule>Test error cases and edge conditions</rule>
+        </requirements>
+        <naming>
+            <pattern>*.test.ts</pattern>
+            <pattern>*.spec.ts</pattern>
+        </naming>
+    </testing>
+
+    <!-- Documentation -->
+    <documentation>
+        <requirements>
+            <rule>Document all public APIs</rule>
+            <rule>Keep README.md up to date</rule>
+            <rule>Use JSDoc for function documentation</rule>
+            <rule>Include examples in documentation</rule>
+            <rule>Document error handling</rule>
+            <rule>Maintain CHANGELOG.md</rule>
+            <rule>Document environment variables</rule>
+        </requirements>
+        <jsdoc>
+            <rule>Include parameter types</rule>
+            <rule>Document return values</rule>
+            <rule>Describe thrown errors</rule>
+            <rule>Add examples for complex functions</rule>
+        </jsdoc>
+    </documentation>
+
+    <!-- Development preferences -->
+    <preferences>
+        <judgment_enabled>true</judgment_enabled>
+        <decision_making_enabled>true</decision_making_enabled>
+        <progress_tracking_enabled>true</progress_tracking_enabled>
+        <error_handling>
+            <rule>Use custom error classes</rule>
+            <rule>Provide meaningful error messages</rule>
+            <rule>Log errors appropriately</rule>
+        </error_handling>
+        <performance>
+            <rule>Optimize expensive operations</rule>
+            <rule>Use appropriate data structures</rule>
+            <rule>Implement caching where beneficial</rule>
+        </performance>
+    </preferences>
+
+    <!-- Project structure -->
+    <structure>
+        <directories>
+            <src>Core application code</src>
+            <test>Test files and fixtures</test>
+            <docs>Documentation files</docs>
+            <scripts>Build and utility scripts</scripts>
+            <config>Configuration files</config>
+        </directories>
+        <patterns>
+            <core>src/core/**/*.ts</core>
+            <data>src/data/**/*.ts</data>
+            <utils>src/utils/**/*.ts</utils>
+            <tests>test/**/*.ts</tests>
+            <graphs>src/graphs/**/*.ts</graphs>
+            <types>src/types/**/*.ts</types>
+        </patterns>
+        <naming>
+            <rule>Use descriptive file names</rule>
+            <rule>Group related files in directories</rule>
+            <rule>Keep directory structure flat when possible</rule>
+        </naming>
+    </structure>
+
+    <!-- Security -->
+    <security>
+        <rule>Never commit API keys or secrets</rule>
+        <rule>Use environment variables for configuration</rule>
+        <rule>Keep dependencies up to date</rule>
+        <rule>Implement proper input validation</rule>
+        <rule>Use secure dependency sources</rule>
+        <rule>Follow security best practices for LLM interactions</rule>
+        <rule>Implement rate limiting for API calls</rule>
+        <rule>Sanitize user inputs</rule>
+    </security>
+
+    <!-- LangGraph Specific -->
+    <langgraph_config>
+        <patterns>
+            <rule>Use typed state management</rule>
+            <rule>Implement proper error handling in nodes</rule>
+            <rule>Document node interfaces</rule>
+            <rule>Use meaningful names for graph states</rule>
+        </patterns>
+        <best_practices>
+            <rule>Keep nodes focused and single-purpose</rule>
+            <rule>Implement proper state validation</rule>
+            <rule>Use appropriate error handling</rule>
+            <rule>Document graph flows</rule>
+        </best_practices>
+        <testing>
+            <rule>Test individual nodes</rule>
+            <rule>Test complete graph flows</rule>
+            <rule>Mock external services</rule>
+            <rule>Test error conditions</rule>
+        </testing>
+    </langgraph_config>
+</cursor_rules>
+
+

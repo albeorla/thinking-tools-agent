@@ -3,6 +3,8 @@ node_modules/
 .pnp/
 .pnp.js
 
+docs/src
+
 # Environment variables
 .env
 .env.local
