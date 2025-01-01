@@ -1,42 +1,15 @@
 {
-  "name": "aerith",
-  "description": "Agent orchestration framework",
-  "type": "module",
+  "name": "thinking-tools-agent",
   "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "lint": "tsc --noEmit && eslint . --fix",
-    "lint:check": "tsc --noEmit && eslint .",
-    "prepare": "husky",
-    "start": "bun run src/index.ts",
-    "test": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "test:watch": "vitest"
-  },
-  "dependencies": {
-    "@langchain/anthropic": "0.3.11",
-    "@langchain/community": "0.3.21",
-    "@langchain/core": "0.3.27",
-    "@langchain/langgraph": "0.2.38",
-    "@langchain/openai": "0.3.16",
-    "langchain": "0.3.8"
-  },
-  "devDependencies": {
-    "@types/bun": "1.1.14",
-    "@typescript-eslint/eslint-plugin": "8.19.0",
-    "@typescript-eslint/parser": "8.19.0",
-    "@vitest/coverage-v8": "2.1.8",
-    "@vitest/ui": "2.1.8",
-    "eslint": "9.17.0",
-    "husky": "9.1.7",
-    "lint-staged": "15.3.0",
-    "prettier": "3.4.2",
-    "ts-node": "10.9.2",
-    "vitest": "2.1.8"
-  },
-  "peerDependencies": {
-    "typescript": "5.7.2"
-  },
-  "license": "MIT"
+    "build": "tsc",
+    "dev": "tsc --watch"
+  }
 }

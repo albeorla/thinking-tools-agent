@@ -1,0 +1,114 @@
+[
+  {
+    "resource": "src/core/agent.ts",
+    "owner": "typescript",
+    "message": "Argument of type 'StateGraphArgs<AgentState>' is not assignable to parameter of type 'StateGraphArgs<NodeNames>'.\n  Types of property 'channels' are incompatible.\n    Type 'ChannelReducers<AgentState>' is not assignable to type 'ChannelReducers<{ __root__: \"__start__\"; }> | ChannelReducers<{ __root__: \"__end__\"; }> | ChannelReducers<{ __root__: \"select_tool\"; }> | ChannelReducers<...> | ChannelReducers<...>'.",
+    "source": "ts",
+    "location": "74:57-70"
+  },
+  {
+    "resource": "src/core/agent.ts",
+    "owner": "typescript",
+    "message": "Argument of type 'RunnableSequence<AgentState, Partial<AgentState>>' is not assignable to parameter of type 'RunnableLike<AgentState, (SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>, LangGraphRunnableConfig<...>>'.\n  Type 'RunnableSequence<AgentState, Partial<AgentState>>' is not assignable to type 'RunnableInterface<AgentState, (SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>, LangGraphRunnableConfig<...>>'.\n    The types returned by 'invoke(...)' are incompatible between these types.\n      Type 'Promise<Partial<AgentState>>' is not assignable to type 'Promise<(SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>>'.\n        Type 'Partial<AgentState>' is not assignable to type '(SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>'.",
+    "source": "ts",
+    "location": "118:47-65"
+  },
+  {
+    "resource": "src/core/agent.ts",
+    "owner": "typescript",
+    "message": "Argument of type 'RunnableSequence<AgentState, Partial<AgentState>>' is not assignable to parameter of type 'RunnableLike<AgentState, (SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>, LangGraphRunnableConfig<...>>'.",
+    "source": "ts",
+    "location": "119:46-63"
+  },
+  {
+    "resource": "src/core/agent.ts",
+    "owner": "typescript",
+    "message": "Argument of type 'RunnableSequence<AgentState, Partial<AgentState>>' is not assignable to parameter of type 'RunnableLike<AgentState, (SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>, LangGraphRunnableConfig<...>>'.",
+    "source": "ts",
+    "location": "120:47-57"
+  },
+  {
+    "resource": "src/core/agent.ts",
+    "owner": "typescript",
+    "message": "Argument of type 'NodeNames' is not assignable to parameter of type '\"__start__\" | \"__start__\"[]'.\n  Type '\"__end__\"' is not assignable to type '\"__start__\" | \"__start__\"[]'.",
+    "source": "ts",
+    "location": "123:19-43"
+  },
+  {
+    "resource": "src/core/agent.ts",
+    "owner": "typescript",
+    "message": "Argument of type 'NodeNames' is not assignable to parameter of type '\"__start__\" | \"__start__\"[]'.",
+    "source": "ts",
+    "location": "124:19-45"
+  },
+  {
+    "resource": "src/core/agent.ts",
+    "owner": "typescript",
+    "message": "Argument of type 'NodeNames' is not assignable to parameter of type '\"__start__\" | \"__start__\"[]'.",
+    "source": "ts",
+    "location": "125:19-44"
+  },
+  {
+    "resource": "src/core/agent.ts",
+    "owner": "typescript",
+    "message": "Argument of type 'NodeNames' is not assignable to parameter of type '\"__start__\"'.\n  Type '\"__end__\"' is not assignable to type '\"__start__\"'.",
+    "source": "ts",
+    "location": "129:7-33"
+  },
+  {
+    "resource": "src/core/agent.ts",
+    "owner": "typescript",
+    "message": "Type 'StateGraph<AgentState, NodeNames, SD extends StateDefinition ? UpdateType<SD> : Partial<S>, \"__start__\", SD extends StateDefinition ? SD : StateDefinition, SD extends StateDefinition ? SD : StateDefinition, StateDefinition>' is not assignable to type 'StateGraph<AgentState, NodeNames, Partial<NodeNames>, \"__start__\", StateDefinition, StateDefinition, StateDefinition>'.\n  Types of property 'addNode' are incompatible.\n    Type '<K extends string, NodeInput = NodeNames>(key: K, action: RunnableLike<NodeInput, (SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>, LangGraphRunnableCon...' is not assignable to type '<K extends string, NodeInput = NodeNames>(key: K, action: RunnableLike<NodeInput, Partial<NodeNames>, LangGraphRunnableConfig<StateType<StateDefinition>>>, options?: StateGraphAddNodeOptions | undefined) => StateGraph<...>'.\n      Types of parameters 'action' and 'action' are incompatible.\n        Type 'RunnableLike<any, Partial<NodeNames>, LangGraphRunnableConfig<StateType<StateDefinition>>>' is not assignable to type 'RunnableLike<any, (SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>, LangGraphRunnableConfig<...>>'.\n          Type 'string' is not assignable to type 'RunnableLike<any, (SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>, LangGraphRunnableConfig<...>>'.",
+    "source": "ts",
+    "location": "137:5-11"
+  },
+  {
+    "resource": "src/core/crew.ts",
+    "owner": "typescript",
+    "message": "Type 'TaskResult | { agentName: string; taskDescription: string; output: string; steps: AgentStep[]; thinkingToolsUsed: AgentAction[]; }' is not assignable to type 'TaskResult'.\n  Type '{ agentName: string; taskDescription: string; output: string; steps: AgentStep[]; thinkingToolsUsed: AgentAction[]; }' is not assignable to type 'TaskResult'.\n    Types of property 'thinkingToolsUsed' are incompatible.\n      Type 'AgentAction[]' is not assignable to type 'string[]'.\n        Type 'AgentAction' is not assignable to type 'string'.",
+    "source": "ts",
+    "location": "79:23-39"
+  },
+  {
+    "resource": "src/core/crew.ts",
+    "owner": "typescript",
+    "message": "Type 'AgentAction[]' is not assignable to type 'string[]'.",
+    "source": "ts",
+    "location": "84:15-32"
+  },
+  {
+    "resource": "src/core/crew.ts",
+    "owner": "typescript",
+    "message": "Property 'startsWith' does not exist on type 'never'.",
+    "source": "ts",
+    "location": "84:99-109"
+  },
+  {
+    "resource": "src/core/crew.ts",
+    "owner": "typescript",
+    "message": "Argument of type 'string' is not assignable to parameter of type '\"__start__\" | \"__start__\"[]'.",
+    "source": "ts",
+    "location": "99:23-31"
+  },
+  {
+    "resource": "src/core/crew.ts",
+    "owner": "typescript",
+    "message": "Argument of type 'string' is not assignable to parameter of type '\"__start__\" | \"__end__\"'.",
+    "source": "ts",
+    "location": "101:36-44"
+  },
+  {
+    "resource": "src/core/crew.ts",
+    "owner": "typescript",
+    "message": "Argument of type 'string' is not assignable to parameter of type '\"__start__\" | \"__start__\"[]'.",
+    "source": "ts",
+    "location": "108:21-29"
+  },
+  {
+    "resource": "src/core/crew.ts",
+    "owner": "typescript",
+    "message": "Property 'invoke' does not exist on type 'StateGraph<CrewState, CrewState, Partial<CrewState>, \"__start__\", StateDefinition, StateDefinition, StateDefinition>'.",
+    "source": "ts",
+    "location": "141:41-47"
+  }
+]

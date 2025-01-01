@@ -207,6 +207,39 @@
             <rule>Test error conditions</rule>
         </testing>
     </langgraph_config>
+
+    <!-- Agent Loop -->
+    <agent_loop>
+        <description>
+            The agent follows an iterative loop after completing each major group of actions.
+            It uses the completed steps to inform the next iteration and checks the updated
+            implementation plan before proceeding.
+        </description>
+        <steps>
+            <step>
+                <name>Observe</name>
+                <details>Review the current state, tasks, and any new updates.</details>
+            </step>
+            <step>
+                <name>Plan</name>
+                <details>Reassess the implementation plan, refine tasks, and outline next actions.</details>
+            </step>
+            <step>
+                <name>Act</name>
+                <details>Execute the planned tasks, code changes, or commands.</details>
+            </step>
+            <step>
+                <name>Review</name>
+                <details>Check results, test coverage, and gather feedback.</details>
+            </step>
+            <step>
+                <name>Reflect</name>
+                <details>Incorporate learnings or newly discovered tasks into the next cycle.</details>
+            </step>
+        </steps>
+        <note>
+            This loop repeats until all tasks are complete or a new implementation plan is introduced.
+        </note>
+    </agent_loop>
+
 </cursor_rules>
-
-

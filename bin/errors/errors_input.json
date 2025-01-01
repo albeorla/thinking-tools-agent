@@ -1,0 +1,187 @@
+[{
+	"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/core/agent.ts",
+	"owner": "typescript",
+	"code": "2345",
+	"severity": 8,
+	"message": "Argument of type 'StateGraphArgs<AgentState>' is not assignable to parameter of type 'StateGraphArgs<NodeNames>'.\n  Types of property 'channels' are incompatible.\n    Type 'ChannelReducers<AgentState>' is not assignable to type 'ChannelReducers<{ __root__: \"__start__\"; }> | ChannelReducers<{ __root__: \"__end__\"; }> | ChannelReducers<{ __root__: \"select_tool\"; }> | ChannelReducers<...> | ChannelReducers<...>'.",
+	"source": "ts",
+	"startLineNumber": 74,
+	"startColumn": 57,
+	"endLineNumber": 74,
+	"endColumn": 70
+},{
+	"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/core/agent.ts",
+	"owner": "typescript",
+	"code": "2345",
+	"severity": 8,
+	"message": "Argument of type 'RunnableSequence<AgentState, Partial<AgentState>>' is not assignable to parameter of type 'RunnableLike<AgentState, (SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>, LangGraphRunnableConfig<...>>'.\n  Type 'RunnableSequence<AgentState, Partial<AgentState>>' is not assignable to type 'RunnableInterface<AgentState, (SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>, LangGraphRunnableConfig<...>>'.\n    The types returned by 'invoke(...)' are incompatible between these types.\n      Type 'Promise<Partial<AgentState>>' is not assignable to type 'Promise<(SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>>'.\n        Type 'Partial<AgentState>' is not assignable to type '(SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>'.",
+	"source": "ts",
+	"startLineNumber": 118,
+	"startColumn": 47,
+	"endLineNumber": 118,
+	"endColumn": 65
+},{
+	"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/core/agent.ts",
+	"owner": "typescript",
+	"code": "2345",
+	"severity": 8,
+	"message": "Argument of type 'RunnableSequence<AgentState, Partial<AgentState>>' is not assignable to parameter of type 'RunnableLike<AgentState, (SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>, LangGraphRunnableConfig<...>>'.",
+	"source": "ts",
+	"startLineNumber": 119,
+	"startColumn": 46,
+	"endLineNumber": 119,
+	"endColumn": 63
+},{
+	"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/core/agent.ts",
+	"owner": "typescript",
+	"code": "2345",
+	"severity": 8,
+	"message": "Argument of type 'RunnableSequence<AgentState, Partial<AgentState>>' is not assignable to parameter of type 'RunnableLike<AgentState, (SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>, LangGraphRunnableConfig<...>>'.",
+	"source": "ts",
+	"startLineNumber": 120,
+	"startColumn": 47,
+	"endLineNumber": 120,
+	"endColumn": 57
+},{
+	"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/core/agent.ts",
+	"owner": "typescript",
+	"code": "2345",
+	"severity": 8,
+	"message": "Argument of type 'NodeNames' is not assignable to parameter of type '\"__start__\" | \"__start__\"[]'.\n  Type '\"__end__\"' is not assignable to type '\"__start__\" | \"__start__\"[]'.",
+	"source": "ts",
+	"startLineNumber": 123,
+	"startColumn": 19,
+	"endLineNumber": 123,
+	"endColumn": 43
+},{
+	"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/core/agent.ts",
+	"owner": "typescript",
+	"code": "2345",
+	"severity": 8,
+	"message": "Argument of type 'NodeNames' is not assignable to parameter of type '\"__start__\" | \"__start__\"[]'.",
+	"source": "ts",
+	"startLineNumber": 124,
+	"startColumn": 19,
+	"endLineNumber": 124,
+	"endColumn": 45
+},{
+	"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/core/agent.ts",
+	"owner": "typescript",
+	"code": "2345",
+	"severity": 8,
+	"message": "Argument of type 'NodeNames' is not assignable to parameter of type '\"__start__\" | \"__start__\"[]'.",
+	"source": "ts",
+	"startLineNumber": 125,
+	"startColumn": 19,
+	"endLineNumber": 125,
+	"endColumn": 44
+},{
+	"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/core/agent.ts",
+	"owner": "typescript",
+	"code": "2345",
+	"severity": 8,
+	"message": "Argument of type 'NodeNames' is not assignable to parameter of type '\"__start__\"'.\n  Type '\"__end__\"' is not assignable to type '\"__start__\"'.",
+	"source": "ts",
+	"startLineNumber": 129,
+	"startColumn": 7,
+	"endLineNumber": 129,
+	"endColumn": 33
+},{
+	"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/core/agent.ts",
+	"owner": "typescript",
+	"code": "2322",
+	"severity": 8,
+	"message": "Type 'StateGraph<AgentState, NodeNames, SD extends StateDefinition ? UpdateType<SD> : Partial<S>, \"__start__\", SD extends StateDefinition ? SD : StateDefinition, SD extends StateDefinition ? SD : StateDefinition, StateDefinition>' is not assignable to type 'StateGraph<AgentState, NodeNames, Partial<NodeNames>, \"__start__\", StateDefinition, StateDefinition, StateDefinition>'.\n  Types of property 'addNode' are incompatible.\n    Type '<K extends string, NodeInput = NodeNames>(key: K, action: RunnableLike<NodeInput, (SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>, LangGraphRunnableCon...' is not assignable to type '<K extends string, NodeInput = NodeNames>(key: K, action: RunnableLike<NodeInput, Partial<NodeNames>, LangGraphRunnableConfig<StateType<StateDefinition>>>, options?: StateGraphAddNodeOptions | undefined) => StateGraph<...>'.\n      Types of parameters 'action' and 'action' are incompatible.\n        Type 'RunnableLike<any, Partial<NodeNames>, LangGraphRunnableConfig<StateType<StateDefinition>>>' is not assignable to type 'RunnableLike<any, (SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>, LangGraphRunnableConfig<...>>'.\n          Type 'string' is not assignable to type 'RunnableLike<any, (SD extends StateDefinition ? UpdateType<SD> : Partial<S>) extends object ? (SD extends StateDefinition ? UpdateType<...> : Partial<...>) & Record<...> : SD extends StateDefinition ? UpdateType<...> : Partial<...>, LangGraphRunnableConfig<...>>'.",
+	"source": "ts",
+	"startLineNumber": 137,
+	"startColumn": 5,
+	"endLineNumber": 137,
+	"endColumn": 11
+},{
+	"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/core/crew.ts",
+	"owner": "typescript",
+	"code": "2322",
+	"severity": 8,
+	"message": "Type 'TaskResult | { agentName: string; taskDescription: string; output: string; steps: AgentStep[]; thinkingToolsUsed: AgentAction[]; }' is not assignable to type 'TaskResult'.\n  Type '{ agentName: string; taskDescription: string; output: string; steps: AgentStep[]; thinkingToolsUsed: AgentAction[]; }' is not assignable to type 'TaskResult'.\n    Types of property 'thinkingToolsUsed' are incompatible.\n      Type 'AgentAction[]' is not assignable to type 'string[]'.\n        Type 'AgentAction' is not assignable to type 'string'.",
+	"source": "ts",
+	"startLineNumber": 79,
+	"startColumn": 23,
+	"endLineNumber": 79,
+	"endColumn": 39
+},{
+	"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/core/crew.ts",
+	"owner": "typescript",
+	"code": "2322",
+	"severity": 8,
+	"message": "Type 'AgentAction[]' is not assignable to type 'string[]'.",
+	"source": "ts",
+	"startLineNumber": 84,
+	"startColumn": 15,
+	"endLineNumber": 84,
+	"endColumn": 32,
+	"relatedInformation": [
+		{
+			"startLineNumber": 49,
+			"startColumn": 3,
+			"endLineNumber": 49,
+			"endColumn": 20,
+			"message": "The expected type comes from property 'thinkingToolsUsed' which is declared here on type 'TaskResult'",
+			"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/types/index.ts"
+		}
+	]
+},{
+	"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/core/crew.ts",
+	"owner": "typescript",
+	"code": "2339",
+	"severity": 8,
+	"message": "Property 'startsWith' does not exist on type 'never'.",
+	"source": "ts",
+	"startLineNumber": 84,
+	"startColumn": 99,
+	"endLineNumber": 84,
+	"endColumn": 109
+},{
+	"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/core/crew.ts",
+	"owner": "typescript",
+	"code": "2345",
+	"severity": 8,
+	"message": "Argument of type 'string' is not assignable to parameter of type '\"__start__\" | \"__start__\"[]'.",
+	"source": "ts",
+	"startLineNumber": 99,
+	"startColumn": 23,
+	"endLineNumber": 99,
+	"endColumn": 31
+},{
+	"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/core/crew.ts",
+	"owner": "typescript",
+	"code": "2345",
+	"severity": 8,
+	"message": "Argument of type 'string' is not assignable to parameter of type '\"__start__\" | \"__end__\"'.",
+	"source": "ts",
+	"startLineNumber": 101,
+	"startColumn": 36,
+	"endLineNumber": 101,
+	"endColumn": 44
+},{
+	"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/core/crew.ts",
+	"owner": "typescript",
+	"code": "2345",
+	"severity": 8,
+	"message": "Argument of type 'string' is not assignable to parameter of type '\"__start__\" | \"__start__\"[]'.",
+	"source": "ts",
+	"startLineNumber": 108,
+	"startColumn": 21,
+	"endLineNumber": 108,
+	"endColumn": 29
+},{
+	"resource": "/Users/aorlando/Documents/thinking-tools-agent/src/core/crew.ts",
+	"owner": "typescript",
+	"code": "2339",
+	"severity": 8,
+	"message": "Property 'invoke' does not exist on type 'StateGraph<CrewState, CrewState, Partial<CrewState>, \"__start__\", StateDefinition, StateDefinition, StateDefinition>'.",
+	"source": "ts",
+	"startLineNumber": 141,
+	"startColumn": 41,
+	"endLineNumber": 141,
+	"endColumn": 47
+}]
